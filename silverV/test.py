@@ -1,10 +1,13 @@
-required_keys = ["name", "email", "age"]
-user = {"name": "보라", "age": 20}
+import operator
 
-not_exist_keys = []
+views = {
+    "alice": 120,
+    "bob": 150,
+    "carol": 110,
+    "dave": 300,
+    "erin": 200
+}
+v = iter(sorted(views.items(), key=operator.itemgetter(1), reverse=True))
 
-for key in required_keys:
-    if key not in user.keys():
-        not_exist_keys.append(key)
-
-print("누락된 키:", not_exist_keys)
+for i in range(3):
+    print(next(v)[0])
