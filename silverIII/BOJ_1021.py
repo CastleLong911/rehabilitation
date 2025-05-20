@@ -14,5 +14,5 @@ for i in nums:
     q.remove(i)
     pos = idx
     if pos == len(q):
-        pos -= 1
+        pos = 0
 print(result)
