@@ -1,13 +1,4 @@
-def flatten(data):
-    result = []
+a = 5
+b = 3
 
-    for i in data:
-        if isinstance(i, list):
-            result += flatten(i)
-        
-        else:
-            result.append(i)
-    return result
-
-
-print(flatten(['a', 1, 'b', True, 3.14, False, 'c']))
+print(a // b)
